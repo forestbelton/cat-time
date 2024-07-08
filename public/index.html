@@ -39,6 +39,7 @@ body {
 	width: 100%;
 	flex: 1;
 	min-height: 0;
+	position: relative;
 }
 
 #cats > img {
@@ -48,6 +49,50 @@ body {
 	height: 50%;
 	padding-left: 12.5%;
 	padding-right: 12.5%;
+	position: absolute;
+}
+
+#cats > img:nth-of-type(1) {
+	animation: slide1 2s 0s linear infinite;
+}
+
+#cats > img:nth-of-type(2) {
+	animation: slide1 2s -0.5s linear infinite;
+}
+
+#cats > img:nth-of-type(3) {
+	animation: slide1 2s -1s linear infinite;
+}
+
+#cats > img:nth-of-type(4) {
+	animation: slide1 2s -1.5s linear infinite;
+}
+
+@keyframes slide1 {
+	0% {
+		top: 0;
+		left: 0;
+	}
+
+	25% {
+		top: 0;
+		left: 50%;
+	}
+
+	50% {
+		top: 50%;
+		left: 50%;
+	}
+
+	75% {
+		top: 50%;
+		left: 0;
+	}
+
+	100% {
+		top: 0;
+		left: 0;
+	}
 }
 
 .blink {
