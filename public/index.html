@@ -1,111 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
 	<meta charset="utf-8" />
 	<title>It's Cat Time</title>
-	<style>
-html, body {
-	background: #353b48;
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	background-image: url(images/space.gif);
-}
-
-#container {
-	align-items: center;
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	width: 100vw;
-	height: 100vh;
-	padding-bottom: 2rem;
-}
-
-#container > h1 {
-	background-image: radial-gradient(circle, violet, indigo, blue, green, yellow, orange, red);
-	color: transparent;
-	background-clip: text;
-	-webkit-background-clip: text;
-	font-size: 5rem;
-	font-style: italic;
-}
-
-#cats {
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	flex: 1;
-	min-height: 0;
-	position: relative;
-}
-
-#cats > img {
-	box-sizing: border-box;
-	display: inline-block;
-	width: 50%;
-	height: 50%;
-	padding-left: 12.5%;
-	padding-right: 12.5%;
-	position: absolute;
-}
-
-#cats > img:nth-of-type(1) {
-	animation: slide1 2s 0s linear infinite;
-}
-
-#cats > img:nth-of-type(2) {
-	animation: slide1 2s -0.5s linear infinite;
-}
-
-#cats > img:nth-of-type(3) {
-	animation: slide1 2s -1s linear infinite;
-}
-
-#cats > img:nth-of-type(4) {
-	animation: slide1 2s -1.5s linear infinite;
-}
-
-@keyframes slide1 {
-	0% {
-		top: 0;
-		left: 0;
-	}
-
-	25% {
-		top: 0;
-		left: 50%;
-	}
-
-	50% {
-		top: 50%;
-		left: 50%;
-	}
-
-	75% {
-		top: 50%;
-		left: 0;
-	}
-
-	100% {
-		top: 0;
-		left: 0;
-	}
-}
-
-.blink {
-  animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-	</style>
+	<link rel="stylesheet" href="main.css" />
 </head>
+
 <body>
 	<div id="container">
 		<h1 class="blink">It's Cat Time!!!!!</h1>
@@ -116,5 +17,44 @@ body {
 			<img src="./images/CatTime4.gif" />
 		</div>
 	</div>
+	<div class="stars" aria-hidden="true">
+		<div class="star">
+			<div class="inner"><img src="./images/star.gif" /></div>
+		</div>
+		<div class="star">
+			<div class="inner"><img src="./images/star.gif" /></div>
+		</div>
+		<div class="star">
+			<div class="inner"><img src="./images/star.gif" /></div>
+		</div>
+		<div class="star">
+			<div class="inner"><img src="./images/star.gif" /></div>
+		</div>
+		<div class="star">
+			<div class="inner"><img src="./images/star.gif" /></div>
+		</div>
+		<div class="star">
+			<div class="inner"><img src="./images/star.gif" /></div>
+		</div>
+		<div class="star">
+			<div class="inner"><img src="./images/star.gif" /></div>
+		</div>
+		<div class="star">
+			<div class="inner"><img src="./images/star.gif" /></div>
+		</div>
+		<div class="star">
+			<div class="inner"><img src="./images/star.gif" /></div>
+		</div>
+		<div class="star">
+			<div class="inner"><img src="./images/star.gif" /></div>
+		</div>
+		<div class="star">
+			<div class="inner"><img src="./images/star.gif" /></div>
+		</div>
+		<div class="star">
+			<div class="inner"><img src="./images/star.gif" /></div>
+		</div>
+	</div>
 </body>
+
 </html>

@@ -1,0 +1,269 @@
+html,
+body {
+    background: #353b48;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(images/space.gif);
+}
+
+#container {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 2rem;
+}
+
+#container>h1 {
+    background-image: radial-gradient(circle, violet, indigo, blue, green, yellow, orange, red);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 5rem;
+    font-style: italic;
+}
+
+#cats {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    position: relative;
+}
+
+#cats>img {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+    position: absolute;
+}
+
+#cats>img:nth-of-type(1) {
+    animation: slide 2s 0s linear infinite;
+}
+
+#cats>img:nth-of-type(2) {
+    animation: slide 2s -0.5s linear infinite;
+}
+
+#cats>img:nth-of-type(3) {
+    animation: slide 2s -1s linear infinite;
+}
+
+#cats>img:nth-of-type(4) {
+    animation: slide 2s -1.5s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    25% {
+        top: 0;
+        left: 50%;
+    }
+
+    50% {
+        top: 50%;
+        left: 50%;
+    }
+
+    75% {
+        top: 50%;
+        left: 0;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+.blink {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.star {
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px #000;
+}
+
+@keyframes stars-fall {
+    0% {
+        transform: translateY(0vh);
+    }
+
+    100% {
+        transform: translateY(110vh);
+    }
+}
+
+@keyframes stars-shake {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(80px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.star {
+    position: fixed;
+    top: -10%;
+    z-index: 9999;
+    /* still needed for Safari */
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+
+    animation-name: stars-shake;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+.star .inner {
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-name: stars-fall;
+    animation-play-state: running;
+    animation-timing-function: linear;
+}
+
+.star .inner img {
+    width: 64px;
+    height: 64px;
+}
+
+.star:nth-of-type(0) {
+    left: 1%;
+    animation-delay: 0s;
+}
+
+.star:nth-of-type(0) .inner {
+    animation-delay: 0s;
+}
+
+.star:nth-of-type(1) {
+    left: 10%;
+    animation-delay: 1s;
+}
+
+.star:nth-of-type(1) .inner {
+    animation-delay: 1s;
+}
+
+.star:nth-of-type(2) {
+    left: 20%;
+    animation-delay: 0.5s;
+}
+
+.star:nth-of-type(2) .inner {
+    animation-delay: 6s;
+}
+
+.star:nth-of-type(3) {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.star:nth-of-type(3) .inner {
+    animation-delay: 4s;
+}
+
+.star:nth-of-type(4) {
+    left: 40%;
+    animation-delay: 2s;
+}
+
+.star:nth-of-type(4) .inner {
+    animation-delay: 2s;
+}
+
+.star:nth-of-type(5) {
+    left: 50%;
+    animation-delay: 3s;
+}
+
+.star:nth-of-type(5) .inner {
+    animation-delay: 8s;
+}
+
+.star:nth-of-type(6) {
+    left: 60%;
+    animation-delay: 2s;
+}
+
+.star:nth-of-type(6) .inner {
+    animation-delay: 6s;
+}
+
+.star:nth-of-type(7) {
+    left: 70%;
+    animation-delay: 1s;
+}
+
+.star:nth-of-type(7) .inner {
+    animation-delay: 2.5s;
+}
+
+.star:nth-of-type(8) {
+    left: 80%;
+    animation-delay: 0s;
+}
+
+.star:nth-of-type(8) .inner {
+    animation-delay: 1s;
+}
+
+.star:nth-of-type(9) {
+    left: 90%;
+    animation-delay: 1.5s;
+}
+
+.star:nth-of-type(9) .inner {
+    animation-delay: 3s;
+}
+
+.star:nth-of-type(10) {
+    left: 25%;
+    animation-delay: 0s;
+}
+
+.star:nth-of-type(10) .inner {
+    animation-delay: 2s;
+}
+
+.star:nth-of-type(11) {
+    left: 65%;
+    animation-delay: 2.5s;
+}
+
+.star:nth-of-type(11) .inner {
+    animation-delay: 4s;
+}
