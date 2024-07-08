@@ -5,11 +5,24 @@
 	<meta charset="utf-8" />
 	<title>It's Cat Time</title>
 	<link rel="stylesheet" href="main.css" />
+	<script>
+		const song = new Audio();
+		song.loop = true;
+		song.src = "./music/song1.mp3";
+		song.volume = 0.5;
+
+		setInterval(() => {
+			if (song.paused) {
+				song.play();
+			}
+		});
+	</script>
 </head>
 
 <body>
 	<div id="container">
 		<h1 class="blink">It's Cat Time!!!!!</h1>
+		<h3>Click for hella sick jams!!!!!!!!</h3>
 		<div id="cats">
 			<img src="./images/CatTime1.gif" />
 			<img src="./images/CatTime2.gif" />
